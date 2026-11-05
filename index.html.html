@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jimmy Gray-Jones – Data Analytics, IT Systems &amp; Projects</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EFF0EA; --surface:#F8F9F5; --ink:#1F2D36; --muted:#52606A; --line:#D3D9D0;
+  --peach:#E6CFAE; --butter:#EBDDA6; --sage:#C5D6C3; --rose:#BFD0DE;
+  --link:#1F5A73; --btn:#1F2D36; --btn-ink:#EFF0EA;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1B242B; --surface:#243039; --ink:#E8ECE6; --muted:#A9B6BC; --line:#36444E;
+  --peach:#4A4132; --butter:#4A4630; --sage:#34463A; --rose:#2F4558;
+  --link:#8FC3D9; --btn:#E8ECE6; --btn-ink:#1B242B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1B242B; --surface:#243039; --ink:#E8ECE6; --muted:#A9B6BC; --line:#36444E;
+  --peach:#4A4132; --butter:#4A4630; --sage:#34463A; --rose:#2F4558;
+  --link:#8FC3D9; --btn:#E8ECE6; --btn-ink:#1B242B; color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 "Newsreader",Georgia,serif}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:4px}
+h1,h2,h3,.sans{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
+.brand{font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;font:500 .98rem "Bricolage Grotesque",sans-serif}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
+h1{font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:1.02;margin:0 0 1.2rem;font-weight:700;letter-spacing:-.025em}
+.lede{font-size:1.3rem;max-width:34ch;color:var(--muted);margin:0 0 1.8rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.3rem;border-radius:10px;font:500 1rem "Bricolage Grotesque",sans-serif;text-decoration:none;background:var(--btn);color:var(--btn-ink)}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+/* the memorable element: a stack of overlapping pastel “index cards” */
+.stack{position:relative;height:340px}
+.stack div{position:absolute;width:78%;padding:1.1rem 1.3rem;border-radius:18px;border:1px solid var(--line);font:500 1rem/1.35 "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.stack b{display:block;font-size:1.25rem;margin-bottom:.25rem}
+.stack span{font:400 .95rem/1.4 "Newsreader",serif;color:var(--muted)}
+.stack .c1{background:var(--peach);top:0;left:0;transform:rotate(-3deg)}
+.stack .c2{background:var(--butter);top:85px;right:0;transform:rotate(2deg)}
+.stack .c3{background:var(--sage);top:175px;left:6%;transform:rotate(-1.5deg)}
+.stack .c4{background:var(--rose);top:255px;right:3%;transform:rotate(3deg);width:68%}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:0 0 .6rem;letter-spacing:-.02em;line-height:1.1}
+.sub{color:var(--muted);max-width:56ch;margin:0 0 2rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem}
+.skill{background:var(--surface);border:1px solid var(--line);border-left-width:8px;border-radius:12px;padding:1.2rem 1.3rem}
+.skill:nth-child(1){border-left-color:var(--peach)}.skill:nth-child(2){border-left-color:var(--butter)}
+.skill:nth-child(3){border-left-color:var(--sage)}.skill:nth-child(4){border-left-color:var(--rose)}
+h3{margin:0 0 .5rem;font-size:1.2rem}
+.skill ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.svc{border-radius:16px;padding:1.6rem;border:1px solid var(--line)}
+.svc:nth-child(1){background:var(--peach)}.svc:nth-child(2){background:var(--sage)}.svc:nth-child(3){background:var(--butter)}
+.svc p{margin:.2rem 0 .8rem}.svc small{font:500 .92rem "Bricolage Grotesque",sans-serif}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tab{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.4rem 1rem;font:500 .98rem "Bricolage Grotesque",sans-serif;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--rose);border-color:var(--ink)}
+.posts{display:grid;gap:0}
+.post{display:grid;grid-template-columns:10rem 1fr;gap:1.5rem;padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.post[hidden]{display:none}
+.kind{font:500 .95rem "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.post h3 a{color:var(--ink);text-decoration:none}
+.post h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.post p{margin:0;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{padding:0 0 1.1rem 1.2rem;border-left:3px solid var(--peach)}
+.timeline b{font-family:"Bricolage Grotesque",sans-serif}
+.timeline span{display:block;color:var(--muted);font-size:1rem}
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:1rem}
+nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
+.pagehead{padding:4rem 0 2.5rem}
+.pagehead h1{font-size:clamp(2.4rem,5.5vw,3.8rem)}
+.legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin:0;color:var(--muted);font:500 .95rem "Bricolage Grotesque",sans-serif}
+.legend span{display:flex;gap:.5rem;align-items:center}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.sg{background:var(--surface);border:1px solid var(--line);border-top-width:8px;border-radius:12px;padding:1.3rem 1.4rem}
+.sg:nth-child(1){border-top-color:var(--peach)}.sg:nth-child(2){border-top-color:var(--butter)}
+.sg:nth-child(3),.sg:nth-child(6){border-top-color:var(--sage)}.sg:nth-child(5){border-top-color:var(--peach)}.sg:nth-child(4){border-top-color:var(--rose)}
+.sg ul{list-style:none;margin:0;padding:0}
+.sg li{display:grid;grid-template-columns:1fr auto 3.6rem;gap:.8rem;align-items:center;padding:.6rem 0;border-top:1px solid var(--line)}
+.sg li:first-child{border-top:0}
+.lv{font:500 .85rem "Bricolage Grotesque",sans-serif;padding:.15rem .65rem;border-radius:999px;border:1px solid var(--line);white-space:nowrap;color:var(--ink)}
+.lv.d{background:var(--sage)}.lv.c{background:var(--butter)}.lv.w{background:var(--peach)}
+.yr{color:var(--muted);font-size:.95rem;text-align:right}
+.used{list-style:none;margin:0;padding:0}
+.used li{display:grid;grid-template-columns:14rem 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.used b{font-family:"Bricolage Grotesque",sans-serif}
+.used p{margin:0;color:var(--muted)}
+.certs{margin:0;padding-left:1.2rem}
+.svc ul{margin:.6rem 0 1rem;padding-left:1.1rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.4rem;counter-reset:s}
+.steps li{counter-increment:s;border-top:4px solid var(--peach);padding-top:.8rem}
+.steps li:nth-child(2){border-top-color:var(--butter)}.steps li:nth-child(3){border-top-color:var(--sage)}.steps li:nth-child(4){border-top-color:var(--rose)}
+.steps li:before{content:counter(s);display:block;font:700 1.6rem "Bricolage Grotesque",sans-serif}
+.steps b{font-family:"Bricolage Grotesque",sans-serif}.steps p{margin:.2rem 0 0;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:.9rem 0}
+summary{cursor:pointer;font:500 1.08rem "Bricolage Grotesque",sans-serif}
+details p{margin:.6rem 0 0;color:var(--muted)}
+.aboutpg{display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
+.portrait{aspect-ratio:1;border-radius:50%;background:var(--sage);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font:500 1rem "Bricolage Grotesque",sans-serif}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.how div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.3rem}
+.how p{margin:0;color:var(--muted)}
+.plinks{display:flex;gap:1.2rem;margin-top:.5rem!important;font:500 .98rem "Bricolage Grotesque",sans-serif}
+.cgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem}
+.field{display:grid;gap:.3rem;margin-bottom:1.1rem}
+.field label{font:500 .98rem "Bricolage Grotesque",sans-serif}
+.field input,.field select,.field textarea{font:inherit;font-size:1.05rem;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%}
+button.btn{border:0;cursor:pointer}
+.direct p{margin:0 0 1.1rem}.direct b{display:block;font-family:"Bricolage Grotesque",sans-serif}
+@media(max-width:780px){.aboutpg,.cgrid{grid-template-columns:1fr}.portrait{max-width:200px}}
+@media(max-width:780px){.used li{grid-template-columns:1fr;gap:.2rem}}
+@media(max-width:780px){.hero,.about{grid-template-columns:1fr}.stack{height:320px}.post{grid-template-columns:1fr;gap:.2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#home">Jimmy Gray-Jones</a>
+  <nav aria-label="Main">
+    <a href="#home">Home</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#personal-projects">Personal Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<div id="view-home">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <h1>I turn messy data and IT workflows into clear reports and working systems.</h1>
+      <p class="lede">Data and IT professional in Lansing, Michigan. Power BI, SQL, Python, and Microsoft 365 automation.</p>
+      <div class="btns"><a class="btn" href="#services">See what I offer</a><a class="btn alt" href="#skills">View my skills</a></div>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <div class="c1"><b>Power BI and reporting</b><span>Automated pipelines and monthly metrics</span></div>
+      <div class="c2"><b>SQL and Python</b><span>Large-scale analysis and scripting</span></div>
+      <div class="c3"><b>Microsoft 365 and SharePoint</b><span>Change management and ITSM</span></div>
+      <div class="c4"><b>AI-assisted automation</b><span>Copilot and SecureGPT workflows</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="skills-preview"><div class="wrap">
+  <h2>Technical skills</h2>
+  <p class="sub">Data analytics and data science on one side, enterprise IT on the other. I use both every day.</p>
+  <div class="skills">
+    <div class="skill"><h3>Analytics and BI</h3><ul><li>Power BI</li><li>Power Query</li><li>Excel</li></ul></div>
+    <div class="skill"><h3>Databases</h3><ul><li>SQL</li><li>PostgreSQL</li><li>MySQL</li></ul></div>
+    <div class="skill"><h3>Data science</h3><ul><li>Python</li><li>Pandas and NumPy</li><li>scikit-learn</li></ul></div>
+    <div class="skill"><h3>IT and Microsoft 365</h3><ul><li>SharePoint</li><li>Change management</li><li>Copilot automation</li></ul></div>
+  </div>
+  <p style="margin-top:2rem"><a class="btn alt" href="#skills">See all skills</a></p>
+</div></section>
+
+<section id="services-preview"><div class="wrap">
+  <h2>Services</h2>
+  <p class="sub">Three ways to work with me. Each starts with a short call to define the scope.</p>
+  <div class="services">
+    <div class="svc"><h3>Dashboards and reporting</h3><p>Power BI reports that refresh on their own from your databases and spreadsheets.</p><small>Fixed scope or hourly</small></div>
+    <div class="svc"><h3>Data analysis</h3><p>SQL and Python analysis that answers a business question, with a written summary of what the patterns mean.</p><small>Per project</small></div>
+    <div class="svc"><h3>Systems and automation</h3><p>SharePoint sites, database design, and workflow automation that fit how your team works.</p><small>Per project</small></div>
+  </div>
+  <p style="margin-top:2rem"><a class="btn" href="#services">See all services</a> <a class="btn alt" href="#contact">Start a conversation</a></p>
+</div></section>
+
+<section id="personal-projects-preview"><div class="wrap">
+  <h2>Personal Projects</h2>
+  <p class="sub">Systems I’ve designed and built, plus research and notes as I publish them.</p>
+  <div class="posts">
+    <article class="post" data-k="Project"><div class="kind">Personal Project · 2026</div><div><h3><a href="#personal-projects">Library Management Information System</a></h3><p>Capstone for my M.S.: a MySQL-backed system with a Python interface, tiered access, and live ticket management.</p></div></article>
+    <article class="post" data-k="Project"><div class="kind">Personal Project · 2025</div><div><h3><a href="#personal-projects">Payroll and EEOC System</a></h3><p>A working Microsoft Access system with tax calculations, forms, and reports, designed from diagrams to demo.</p></div></article>
+  </div>
+  <p style="margin-top:1.5rem"><a class="btn alt" href="#personal-projects">See all personal projects</a></p>
+</div></section>
+
+<section id="about-preview"><div class="wrap about">
+  <div>
+    <h2>About me</h2>
+    <p>I hold a B.S. in Data Science and an M.S. in Information Systems, and I work as a systems analyst on an enterprise IT team. I like work that connects data, process, and the people who rely on both.</p>
+    <p><a href="#about">More about me</a></p>
+  </div>
+  <div>
+    <h3>Experience</h3>
+    <ul class="timeline">
+      <li><b>Systems Analyst I, Blue Cross Blue Shield of Michigan</b><span>November 2025 to present</span></li>
+      <li><b>Associate Systems Analyst, Blue Cross Blue Shield of Michigan</b><span>December 2023 to November 2025</span></li>
+      <li><b>M.S. Information Systems, Central Michigan University</b><span>2026</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="contact-preview"><div class="wrap">
+  <h2>Contact</h2>
+  <p class="sub">Tell me what you’re working on. I reply within two business days.</p>
+  <div class="btns"><a class="btn" href="mailto:jimmyjones0119@gmail.com">jimmyjones0119@gmail.com</a><a class="btn alt" href="#">LinkedIn</a><a class="btn alt" href="#contact">Send a message</a></div>
+</div></section>
+</div>
+
+<div id="view-skills" hidden>
+<div class="wrap">
+  <div class="pagehead">
+    <h1>Skills</h1>
+    <p class="lede">The tools I use for data analytics, data science, and IT systems work.</p>
+    <p class="legend"><span><i class="lv d" style="font-style:normal">Daily work</i> Part of my current job</span><span><i class="lv c" style="font-style:normal">Also experienced</i> From personal projects, coursework, or earlier work</span></p>
+  </div>
+</div>
+<section><div class="wrap">
+  <div class="sgrid">
+    <div class="sg"><h3>Analytics and BI</h3><ul>
+      <li><span>Power BI</span><span class="lv d">Daily work</span></li>
+      <li><span>Power Query</span><span class="lv d">Daily work</span></li>
+      <li><span>Excel</span><span class="lv d">Daily work</span></li>
+      <li><span>Power Automate</span><span class="lv c">Also experienced</span></li>
+      <li><span>Tableau</span><span class="lv c">Also experienced</span></li>
+      <li><span>Celonis</span><span class="lv c">Also experienced</span></li>
+    </ul></div>
+    <div class="sg"><h3>Databases</h3><ul>
+      <li><span>SQL</span><span class="lv d">Daily work</span></li>
+      <li><span>PostgreSQL</span><span class="lv c">Also experienced</span></li>
+      <li><span>MySQL</span><span class="lv c">Also experienced</span></li>
+      <li><span>MongoDB</span><span class="lv c">Also experienced</span></li>
+      <li><span>Microsoft Access</span><span class="lv c">Also experienced</span></li>
+    </ul></div>
+    <div class="sg"><h3>Programming and data science</h3><ul>
+      <li><span>Python</span><span class="lv d">Daily work</span></li>
+      <li><span>Pandas and NumPy</span><span class="lv d">Daily work</span></li>
+      <li><span>Matplotlib and SciPy</span><span class="lv c">Also experienced</span></li>
+      <li><span>scikit-learn and Statsmodels</span><span class="lv c">Also experienced</span></li>
+      <li><span>TensorFlow and Keras</span><span class="lv c">Also experienced</span></li>
+      <li><span>R</span><span class="lv c">Also experienced</span></li>
+      <li><span>C and C++</span><span class="lv c">Also experienced</span></li>
+      <li><span>JavaScript, HTML and CSS</span><span class="lv c">Also experienced</span></li>
+      <li><span>Bash</span><span class="lv c">Also experienced</span></li>
+    </ul></div>
+    <div class="sg"><h3>IT and Microsoft 365</h3><ul>
+      <li><span>Microsoft 365 support</span><span class="lv d">Daily work</span></li>
+      <li><span>SharePoint site design</span><span class="lv d">Daily work</span></li>
+      <li><span>Change management</span><span class="lv d">Daily work</span></li>
+      <li><span>ITSM platform testing</span><span class="lv d">Daily work</span></li>
+      <li><span>AI workflow automation</span><span class="lv d">Daily work</span></li>
+      <li><span>Prompt engineering</span><span class="lv c">Also experienced</span></li>
+    </ul></div>
+    <div class="sg"><h3>Developer tools</h3><ul>
+      <li><span>Git</span><span class="lv c">Also experienced</span></li>
+      <li><span>PyCharm</span><span class="lv c">Also experienced</span></li>
+      <li><span>JupyterHub and Anaconda</span><span class="lv c">Also experienced</span></li>
+      <li><span>Visual Studio</span><span class="lv c">Also experienced</span></li>
+      <li><span>Hadoop</span><span class="lv c">Also experienced</span></li>
+    </ul></div>
+    <div class="sg"><h3>Design and documentation</h3><ul>
+      <li><span>Lucidchart diagrams</span><span class="lv c">Also experienced</span></li>
+      <li><span>Figma</span><span class="lv c">Also experienced</span></li>
+      <li><span>Web design</span><span class="lv c">Also experienced</span></li>
+      <li><span>Technical write-ups</span><span class="lv d">Daily work</span></li>
+    </ul></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2>Where I’ve used them</h2>
+  <p class="sub">What I do at work and in my personal projects, matched to the tools involved.</p>
+  <ul class="used">
+    <li><b>Blue Cross Blue Shield of Michigan</b><p>Power BI, Power Query, SQL, and Python to build automated data pipelines and monthly and yearly reports, and to analyze change data for patterns and trends.</p></li>
+    <li><b>Library Management Information System</b><p>MySQL, Python, Figma, and Lucidchart to design and build a full system with a database back end, a graphical interface, and tiered access.</p></li>
+    <li><b>Payroll and EEOC System</b><p>Microsoft Access and Lucidchart to design and deliver a payroll system with tax calculations, forms, reports, and full documentation.</p></li>
+  </ul>
+</div></section>
+<section><div class="wrap">
+  <h2>Education</h2>
+  <ul class="certs">
+    <li>M.S. Information Systems (Business Data Analytics concentration), Central Michigan University, 2024 to 2026</li>
+    <li>B.S. Data Science (Computer Science concentration), Michigan State University, 2021 to 2024</li>
+  </ul>
+  <p style="margin-top:2rem"><a class="btn" href="#services">See how I can help</a> <a class="btn alt" href="#contact">Get in touch</a></p>
+</div></section>
+</div>
+
+<div id="view-services" hidden>
+<div class="wrap"><div class="pagehead">
+  <h1>Services</h1>
+  <p class="lede">Reporting, analysis, and systems work, scoped clearly before it starts.</p>
+</div></div>
+<section><div class="wrap">
+  <div class="services">
+    <div class="svc"><h3>Dashboards and reporting</h3><p>I build Power BI reports that refresh on their own from your databases and spreadsheets.</p>
+      <ul><li>Data pipelines from your sources into Power BI</li><li>Monthly and yearly metric reports</li><li>A short guide for the people who use them</li></ul><small>Fixed scope or hourly</small></div>
+    <div class="svc"><h3>Data analysis</h3><p>I answer questions about your data with SQL, Python, and statistics, then explain what the patterns mean.</p>
+      <ul><li>Analysis of large datasets</li><li>Written findings with charts</li><li>Reusable queries and scripts</li></ul><small>Per project</small></div>
+    <div class="svc"><h3>Systems and automation</h3><p>I set up the systems and workflows that save your team repeat work.</p>
+      <ul><li>SharePoint sites with forms, lists, and analytics</li><li>Database and system design, from diagrams to working tables</li><li>Python and AI-assisted workflow automation</li></ul><small>Per project</small></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2>How an engagement works</h2>
+  <p class="sub">The same four steps apply to every service.</p>
+  <ol class="steps">
+    <li><b>Intro call</b><p>We talk through the problem. It’s free and takes about 30 minutes.</p></li>
+    <li><b>Scope and quote</b><p>You get a written plan, timeline, and price.</p></li>
+    <li><b>Work in short cycles</b><p>You see progress along the way, not only at the end.</p></li>
+    <li><b>Handoff</b><p>You get everything documented so your team can run it without me.</p></li>
+  </ol>
+</div></section>
+<section><div class="wrap">
+  <h2>Common questions</h2>
+  <details><summary>What do you need from me to start?</summary><p>Access to the data or a sample of it, a description of the decision the work supports, and the people who will use the result.</p></details>
+  <details><summary>Which tools do you work in?</summary><p>Power BI, Excel, SQL (PostgreSQL and MySQL), Python, SharePoint, and Power Automate. If you use something else, ask.</p></details>
+  <details><summary>How do you handle sensitive data?</summary><p>I work with the minimum data needed, and I can use masked or sample data when that’s an option.</p></details>
+  <p style="margin-top:2rem"><a class="btn" href="#contact">Book an intro call</a> <a class="btn alt" href="#skills">Review my skills</a></p>
+</div></section>
+</div>
+
+<div id="view-personal-projects" hidden>
+<div class="wrap"><div class="pagehead">
+  <h1>Personal Projects</h1>
+  <p class="lede">Personal projects I’ve built, research papers, and shorter notes on data and IT work.</p>
+</div></div>
+<section><div class="wrap">
+  <div class="tabs" role="group" aria-label="Filter by type">
+    <button class="tab" data-f="all" aria-pressed="true">All</button>
+    <button class="tab" data-f="Paper" aria-pressed="false">Papers</button>
+    <button class="tab" data-f="Project" aria-pressed="false">Personal Projects</button>
+    <button class="tab" data-f="Note" aria-pressed="false">Notes</button>
+  </div>
+  <div class="posts">
+    <article class="post" data-k="Project"><div class="kind">Personal Project · 2026</div><div><h3><a href="#personal-projects">Library Management Information System</a></h3><p>Capstone for my M.S. in Information Systems. I wrote the business proposal and project plan, drew the data flow and entity-relationship diagrams in Lucidchart, built the tables in MySQL, and designed the interface in Figma. The working interface uses Python and CustomTkinter, connected to the database, with tiered access, account security, and live ticket management.</p><span class="plinks"><a href="#">Write-up</a><a href="#">Source code</a></span></div></article>
+    <article class="post" data-k="Project"><div class="kind">Personal Project · 2025</div><div><h3><a href="#personal-projects">Payroll and EEOC System</a></h3><p>A systems analysis and design project built in Microsoft Access. It includes diagrams, a fully working payroll and EEOC system with tax calculations and reports, documentation for every table, form, and report, and a live demonstration.</p><span class="plinks"><a href="#">Write-up</a></span></div></article>
+    <article class="post" data-k="Paper"><div class="kind">Paper · Coming soon</div><div><h3><a href="#personal-projects">[Your paper title]</a></h3><p>[Question you asked and what you found.]</p></div></article>
+    <article class="post" data-k="Note"><div class="kind">Note · Coming soon</div><div><h3><a href="#personal-projects">From database to dashboard: automating monthly reporting</a></h3><p>[A short note on the pipeline approach you use in Power BI.]</p></div></article>
+  </div>
+</div></section>
+</div>
+
+<div id="view-about" hidden>
+<div class="wrap"><div class="pagehead">
+  <h1>About me</h1>
+  <p class="lede">I help organizations make better decisions from their data and run their systems more smoothly.</p>
+</div></div>
+<section><div class="wrap aboutpg">
+  <div class="portrait" role="img" aria-label="Placeholder for a portrait photo">Your photo</div>
+  <div>
+    <p>I’m Jimmy, an IT professional in Lansing, Michigan with a B.S. in Data Science and an M.S. in Information Systems. My focus is data analytics, systems analysis, database management, and process automation.</p>
+    <p>At Blue Cross Blue Shield of Michigan I build Power BI reports, analyze data with SQL and Python, and support Microsoft 365 services. I’m the analytics specialist on my team, and I lead projects that use AI tools such as Copilot and SecureGPT to improve existing workflows.</p>
+    <p>I combine technical problem-solving with an understanding of business processes, so reports and systems get used, not just delivered.</p>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2>How I work</h2>
+  <div class="how">
+    <div><h3>Start with the question</h3><p>Every report and system begins with the decision it needs to support.</p></div>
+    <div><h3>Automate repeat work</h3><p>If a task happens every month, it should run on its own.</p></div>
+    <div><h3>Document everything</h3><p>Clear write-ups and guides mean your team can use what I build without me.</p></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2>Experience and education</h2>
+  <ul class="timeline">
+    <li><b>Systems Analyst I, Blue Cross Blue Shield of Michigan</b><span>November 2025 to present · Change management and Microsoft 365 engineering. Change administrator for four teams, analytics lead for monthly reporting, and automation projects with AI tools.</span></li>
+    <li><b>Associate Systems Analyst, Blue Cross Blue Shield of Michigan</b><span>December 2023 to November 2025 · Built automated data pipelines and Power BI reports, reviewed production SQL, and wrote Python scripts to automate daily tasks.</span></li>
+    <li><b>M.S. Information Systems, Central Michigan University</b><span>2024 to 2026 · Business Data Analytics concentration</span></li>
+    <li><b>B.S. Data Science, Michigan State University</b><span>2021 to 2024 · Computer Science concentration</span></li>
+  </ul>
+  <p style="margin-top:2rem"><a class="btn" href="#contact">Work with me</a> <a class="btn alt" href="#skills">See my skills</a></p>
+</div></section>
+</div>
+
+<div id="view-contact" hidden>
+<div class="wrap"><div class="pagehead">
+  <h1>Contact</h1>
+  <p class="lede">Tell me what you’re working on. I reply within two business days.</p>
+</div></div>
+<section><div class="wrap cgrid">
+  <form id="cform">
+    <div class="field"><label for="cn">Your name</label><input id="cn" name="name" required autocomplete="name"></div>
+    <div class="field"><label for="ce">Your email</label><input id="ce" name="email" type="email" required autocomplete="email"></div>
+    <div class="field"><label for="ct">What do you need?</label>
+      <select id="ct" name="topic"><option>Dashboards and reporting</option><option>Data analysis</option><option>Systems and automation</option><option>Something else</option></select></div>
+    <div class="field"><label for="cm">Message</label><textarea id="cm" name="message" rows="6" required></textarea></div>
+    <button class="btn" type="submit">Open in my email app</button>
+  </form>
+  <div class="direct">
+    <p><b>Email</b><a href="mailto:jimmyjones0119@gmail.com">jimmyjones0119@gmail.com</a></p>
+    <p><b>LinkedIn</b><a href="#">Add your profile link</a></p>
+    <p><b>Location</b>Lansing, Michigan (Eastern time)</p>
+  </div>
+</div></section>
+</div>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Jimmy Gray-Jones. All rights reserved.</div></footer>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('#view-personal-projects .tab'),posts=document.querySelectorAll('#view-personal-projects .post');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+    var f=t.dataset.f;
+    posts.forEach(function(p){p.hidden=!(f==='all'||p.dataset.k===f)});
+  })});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var pages=['skills','services','personal-projects','about','contact'],home=document.getElementById('view-home'),links=document.querySelectorAll('nav a');
+  function route(){
+    var h=location.hash.slice(1),cur=pages.indexOf(h)>-1?h:'';
+    home.hidden=!!cur;pages.forEach(function(p){document.getElementById('view-'+p).hidden=p!==cur});
+    document.title=cur?cur.split('-').map(function(w){return w.charAt(0).toUpperCase()+w.slice(1)}).join(' ')+' – Jimmy Gray-Jones':'Jimmy Gray-Jones – Data Analytics, IT Systems & Projects';
+    links.forEach(function(a){
+      var t=a.getAttribute('href').slice(1);
+      if((cur&&t===cur)||(!cur&&(h===''||h==='home'||h==='top')&&t==='home'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    var el=(!cur&&h&&h!=='home'&&h!=='top')?document.getElementById(h):null;
+    if(el)el.scrollIntoView();else window.scrollTo(0,0);
+  }
+  var cf=document.getElementById('cform');
+  cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(cf),a=document.createElement('a');
+    a.href='mailto:jimmyjones0119@gmail.com?subject='+encodeURIComponent('['+d.get('topic')+'] '+d.get('name'))+'&body='+encodeURIComponent(d.get('message')+'\n\n'+d.get('name')+'\n'+d.get('email'));
+    a.click();
+  });
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>
