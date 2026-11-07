@@ -6,40 +6,61 @@
 <title>Jimmy Gray-Jones</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
 <style>
+
 :root{
   --bg:#EFF0EA; --surface:#F8F9F5; --ink:#1F2D36; --muted:#52606A; --line:#D3D9D0;
   --peach:#E6CFAE; --butter:#EBDDA6; --sage:#C5D6C3; --rose:#BFD0DE;
   --link:#1F5A73; --btn:#1F2D36; --btn-ink:#EFF0EA;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
+
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#1B242B; --surface:#243039; --ink:#E8ECE6; --muted:#A9B6BC; --line:#36444E;
   --peach:#4A4132; --butter:#4A4630; --sage:#34463A; --rose:#2F4558;
   --link:#8FC3D9; --btn:#E8ECE6; --btn-ink:#1B242B; color-scheme:dark}}
+
 :root[data-theme="dark"]{
   --bg:#1B242B; --surface:#243039; --ink:#E8ECE6; --muted:#A9B6BC; --line:#36444E;
   --peach:#4A4132; --butter:#4A4630; --sage:#34463A; --rose:#2F4558;
   --link:#8FC3D9; --btn:#E8ECE6; --btn-ink:#1B242B; color-scheme:dark}
+
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
+
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 "Newsreader",Georgia,serif}
 a{color:var(--link)}
+
 :focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:4px}
 h1,h2,h3,.sans{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+
 .wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+
 header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+
 header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
+
 .brand{font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
+
 nav{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;font:500 .98rem "Bricolage Grotesque",sans-serif}
+
 nav a{color:var(--ink);text-decoration:none}
+
 nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
 .hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
+
 h1{font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:1.02;margin:0 0 1.2rem;font-weight:700;letter-spacing:-.025em}
+
 .lede{font-size:1.3rem;max-width:34ch;color:var(--muted);margin:0 0 1.8rem}
+
 .btns{display:flex;gap:.8rem;flex-wrap:wrap}
+
 .btn{display:inline-block;padding:.75rem 1.3rem;border-radius:10px;font:500 1rem "Bricolage Grotesque",sans-serif;text-decoration:none;background:var(--btn);color:var(--btn-ink)}
+
 .btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+
 /* the memorable element: a stack of overlapping pastel “index cards” */
 .stack{position:relative;height:340px}
 .stack div{position:absolute;width:78%;padding:1.1rem 1.3rem;border-radius:18px;border:1px solid var(--line);font:500 1rem/1.35 "Bricolage Grotesque",sans-serif;color:var(--ink)}
@@ -49,13 +70,16 @@ h1{font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:1.02;margin:0 0 1.2rem;font-
 .stack .c2{background:var(--butter);top:85px;right:0;transform:rotate(2deg)}
 .stack .c3{background:var(--sage);top:175px;left:6%;transform:rotate(-1.5deg)}
 .stack .c4{background:var(--rose);top:255px;right:3%;transform:rotate(3deg);width:68%}
+
 section{padding:3.5rem 0;border-top:1px solid var(--line)}
+
 h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:0 0 .6rem;letter-spacing:-.02em;line-height:1.1}
 .sub{color:var(--muted);max-width:56ch;margin:0 0 2rem}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem}
 .skill{background:var(--surface);border:1px solid var(--line);border-left-width:8px;border-radius:12px;padding:1.2rem 1.3rem}
 .skill:nth-child(1){border-left-color:var(--peach)}.skill:nth-child(2){border-left-color:var(--butter)}
 .skill:nth-child(3){border-left-color:var(--sage)}.skill:nth-child(4){border-left-color:var(--rose)}
+
 h3{margin:0 0 .5rem;font-size:1.2rem}
 .skill ul{margin:0;padding-left:1.1rem;color:var(--muted)}
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
@@ -77,7 +101,9 @@ h3{margin:0 0 .5rem;font-size:1.2rem}
 .timeline li{padding:0 0 1.1rem 1.2rem;border-left:3px solid var(--peach)}
 .timeline b{font-family:"Bricolage Grotesque",sans-serif}
 .timeline span{display:block;color:var(--muted);font-size:1rem}
+
 footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:1rem}
+
 nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
 .pagehead{padding:4rem 0 2.5rem}
 .pagehead h1{font-size:clamp(2.4rem,5.5vw,3.8rem)}
@@ -104,8 +130,11 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
 .steps li:nth-child(2){border-top-color:var(--butter)}.steps li:nth-child(3){border-top-color:var(--sage)}.steps li:nth-child(4){border-top-color:var(--rose)}
 .steps li:before{content:counter(s);display:block;font:700 1.6rem "Bricolage Grotesque",sans-serif}
 .steps b{font-family:"Bricolage Grotesque",sans-serif}.steps p{margin:.2rem 0 0;color:var(--muted)}
+
 details{border-bottom:1px solid var(--line);padding:.9rem 0}
+
 summary{cursor:pointer;font:500 1.08rem "Bricolage Grotesque",sans-serif}
+
 details p{margin:.6rem 0 0;color:var(--muted)}
 .aboutpg{display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start}
 .portrait{aspect-ratio:1;border-radius:50%;background:var(--sage);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font:500 1rem "Bricolage Grotesque",sans-serif}
@@ -117,6 +146,7 @@ details p{margin:.6rem 0 0;color:var(--muted)}
 .field{display:grid;gap:.3rem;margin-bottom:1.1rem}
 .field label{font:500 .98rem "Bricolage Grotesque",sans-serif}
 .field input,.field select,.field textarea{font:inherit;font-size:1.05rem;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%}
+
 button.btn{border:0;cursor:pointer}
 .direct p{margin:0 0 1.1rem}.direct b{display:block;font-family:"Bricolage Grotesque",sans-serif}
 @media(max-width:780px){.aboutpg,.cgrid{grid-template-columns:1fr}.portrait{max-width:200px}}
@@ -125,6 +155,8 @@ button.btn{border:0;cursor:pointer}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
+
+<!--Start of the Body-->
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#home">Jimmy Gray-Jones</a>
@@ -132,25 +164,26 @@ button.btn{border:0;cursor:pointer}
     <a href="#home">Home</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#personal-projects">Personal Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
   </nav>
 </div></header>
-
+  
 <main id="top">
 <div id="view-home">
 <div class="wrap">
   <div class="hero">
     <div>
-      <h1>I turn messy data and IT workflows into clear reports and working systems.</h1>
-      <p class="lede">Data and IT professional in Lansing, Michigan. Power BI, SQL, Python, and Microsoft 365 automation.</p>
+      <h1>I transform messy data and systems into strategic insights and automation</h1>
+      <p class="lede">Information technology professional based in Lansing, Michigan.</p>
       <div class="btns"><a class="btn" href="#services">See what I offer</a><a class="btn alt" href="#skills">View my skills</a></div>
     </div>
     <div class="stack" aria-hidden="true">
-      <div class="c1"><b>Power BI and reporting</b><span>Automated pipelines and monthly metrics</span></div>
-      <div class="c2"><b>SQL and Python</b><span>Large-scale analysis and scripting</span></div>
-      <div class="c3"><b>Microsoft 365 and SharePoint</b><span>Change management and ITSM</span></div>
-      <div class="c4"><b>AI-assisted automation</b><span>Copilot and SecureGPT workflows</span></div>
+      <div class="c1"><b>Analytics & Reporting</b><span>Automated pipelines and monthly metrics</span></div>
+      <div class="c2"><b>System Design</b><span>Large-scale analysis and scripting</span></div>
+      <div class="c3"><b>Automation</b><span>CoPilot</span></div>
+      <div class="c4"><b>System & Database Design</b><span>Copilot and SecureGPT workflows</span></div>
     </div>
   </div>
 </div>
 
+<!--Technical Skills Section-->
 <section id="skills-preview"><div class="wrap">
   <h2>Technical skills</h2>
   <p class="sub">Data analytics and data science on one side, enterprise IT on the other. I use both every day.</p>
