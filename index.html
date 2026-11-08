@@ -6,6 +6,7 @@
 <title>Jimmy Gray-Jones – Data Analytics, IT Systems &amp; Projects</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --bg:#EFF0EA; --surface:#F8F9F5; --ink:#1F2D36; --muted:#52606A; --line:#D3D9D0;
@@ -36,7 +37,7 @@ nav a{color:var(--ink);text-decoration:none}
 nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
 h1{font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:1.02;margin:0 0 1.2rem;font-weight:700;letter-spacing:-.025em}
-.lede{font-size:1.3rem;max-width:34ch;color:var(--muted);margin:0 0 1.8rem}
+.lede{font-size:1.3rem;max-width:100ch;color:var(--muted);margin:0 0 1.8rem} /*Handles the text below headings of pages*/
 .btns{display:flex;gap:.8rem;flex-wrap:wrap}
 .btn{display:inline-block;padding:.75rem 1.3rem;border-radius:10px;font:500 1rem "Bricolage Grotesque",sans-serif;text-decoration:none;background:var(--btn);color:var(--btn-ink)}
 .btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
@@ -59,9 +60,14 @@ h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:0 0 .6rem;letter-spacing:-.02em;l
 h3{margin:0 0 .5rem;font-size:1.2rem}
 .skill ul{margin:0;padding-left:1.1rem;color:var(--muted)}
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+
 .svc{border-radius:16px;padding:1.6rem;border:1px solid var(--line)}
+
 .svc:nth-child(1){background:var(--peach)}.svc:nth-child(2){background:var(--sage)}.svc:nth-child(3){background:var(--butter)}
+.svc:nth-child(4) {background: var(--rose)}.svc:nth-child(5) {background: var(--peach)}
+
 .svc p{margin:.2rem 0 .8rem}.svc small{font:500 .92rem "Bricolage Grotesque",sans-serif}
+
 .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .tab{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.4rem 1rem;font:500 .98rem "Bricolage Grotesque",sans-serif;cursor:pointer}
 .tab[aria-pressed="true"]{background:var(--rose);border-color:var(--ink)}
@@ -119,12 +125,15 @@ details p{margin:.6rem 0 0;color:var(--muted)}
 .field input,.field select,.field textarea{font:inherit;font-size:1.05rem;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:100%}
 button.btn{border:0;cursor:pointer}
 .direct p{margin:0 0 1.1rem}.direct b{display:block;font-family:"Bricolage Grotesque",sans-serif}
+
 @media(max-width:780px){.aboutpg,.cgrid{grid-template-columns:1fr}.portrait{max-width:200px}}
 @media(max-width:780px){.used li{grid-template-columns:1fr;gap:.2rem}}
 @media(max-width:780px){.hero,.about{grid-template-columns:1fr}.stack{height:320px}.post{grid-template-columns:1fr;gap:.2rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 </style>
 </head>
+
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#home">Jimmy Gray-Jones</a>
@@ -210,8 +219,9 @@ button.btn{border:0;cursor:pointer}
 <div id="view-skills" hidden>
 <div class="wrap">
   <div class="pagehead">
-    <h1>Skills</h1>
-    <p class="lede">The tools I use for data analytics, data science, and IT systems work.</p>
+    <h1>Technical Skills</h1>
+    <p class="lede">Over the course of my adult life I have been been exposed to and worked with a vast array of technologies to complete projects. Below are a list of technical skills I have acquired through a combination of course work,
+      personal projects, and professional work, broken into the categories of "Experienced" and "Knowledgeable".</p>
     <p class="legend"><span><i class="lv d" style="font-style:normal">Experienced</i> Skills I have directly utilized and applied in professional settings</span><span><i class="lv c" style="font-style:normal">Knowledgeable</i> Skills I learned and have implemented in personal projects or coursework</span></p>
   </div>
 </div>
@@ -225,7 +235,7 @@ button.btn{border:0;cursor:pointer}
       <li><span>Celonis</span><span class="lv c">Knowledgeable</span></li>
     </ul></div>
     <div class="sg"><h3>Databases</h3><ul>
-      <li><span>SQL</span><span class="lv d">Experienced</span></li>
+      <li><span>SQL Programming</span><span class="lv d">Experienced</span></li>
       <li><span>PostgreSQL</span><span class="lv c">Knowledgeable</span></li>
       <li><span>MySQL</span><span class="lv c">Knowledgeable</span></li>
       <li><span>MongoDB</span><span class="lv c">Knowledgeable</span></li>
@@ -252,9 +262,9 @@ button.btn{border:0;cursor:pointer}
     <div class="sg"><h3>Developer tools</h3><ul>
       <li><span>Git</span><span class="lv c">Knowledgeable</span></li>
       <li><span>PyCharm</span><span class="lv c">Knowledgeable</span></li>
-      <li><span>JupyterHub</span><span class="lv c">Knowledgeable</span></li>
-      <li><span>Anaconda</span><span class="lv c">Knowledgeable</span></li>
-      <li><span>Visual Studio</span><span class="lv c">Knowledgeable</span></li>
+      <li><span>JupyterHub</span><span class="lv d">Experienced</span></li>
+      <li><span>Anaconda</span><span class="lv d">Experienced</span></li>
+      <li><span>Visual Studio</span><span class="lv d">Experienced</span></li>
       <li><span>Hadoop</span><span class="lv c">Knowledgeable</span></li>
     </ul></div>
     <div class="sg"><h3>System Design &amp; Documentation</h3><ul>
@@ -269,17 +279,34 @@ button.btn{border:0;cursor:pointer}
 <div id="view-services" hidden>
 <div class="wrap"><div class="pagehead">
   <h1>Services</h1>
-  <p class="lede">Reporting, analysis, and systems work, scoped clearly before it starts.</p>
+  <p class="lede">
+      I offer a range of data-driven services designed to optimize how you and your business leverage information. My goal is to transform raw data into meaningful insights that uncover opportunities, improve decision-making, and drive business growth.
+      <br /><br />Services include but are not limited to dashboard & report development, database & system design, documenting workflows, and Office-365 support.
+  </p>
 </div></div>
 <section><div class="wrap">
-  <div class="services">
-    <div class="svc"><h3>Dashboards and reporting</h3><p>I build Power BI reports that refresh on their own from your databases and spreadsheets.</p>
-      <ul><li>Data pipelines from your sources into Power BI</li><li>Monthly and yearly metric reports</li><li>A short guide for the people who use them</li></ul><small>Fixed scope or hourly</small></div>
-    <div class="svc"><h3>Data analysis</h3><p>I answer questions about your data with SQL, Python, and statistics, then explain what the patterns mean.</p>
-      <ul><li>Analysis of large datasets</li><li>Written findings with charts</li><li>Reusable queries and scripts</li></ul><small>Per project</small></div>
-    <div class="svc"><h3>Systems and automation</h3><p>I set up the systems and workflows that save your team repeat work.</p>
-      <ul><li>SharePoint sites with forms, lists, and analytics</li><li>Database and system design, from diagrams to working tables</li><li>Python and AI-assisted workflow automation</li></ul><small>Per project</small></div>
-  </div>
+             <div class="services">
+                 <div class="svc">
+                     <h3>Dashboard & Report Development</h3><p>I will build aesthetically pleasing Power BI dashboards from your data. If circumstances allow, fully automated as well.</p>
+                     <ul><li>Data pipelines from your sources into Power BI, Excel, or Tableau</li><li>Aesthetic personalized visuals</li><li>A short technical guide for the people who use and/or support them</li></ul><small>100$ per project</small>
+                 </div>
+                 <div class="svc">
+                     <h3>Data analysis</h3><p>I will answer questions about your data using a combination of programming and statistical techniques, then explain what the insights mean for your business.</p>
+                     <ul><li>Rigorous analysis of your data</li><li>A professionally written report with data visualizations</li><li>Reusable queries and scripts</li></ul><small>100$ per report</small>
+                 </div>
+                 <div class="svc">
+                     <h3>Office-365 Support</h3><p>I troubleshoot your Office-365 applications and build workflows that empower work within your environment</p>
+                     <ul><li>Develop SharePoint sites with forms, lists, and analytics</li><li>Troubleshoot your Office 365 Applications</li><li>Review and adjust application settings based on business need</li></ul><small>Per project</small>
+                 </div>
+                 <div class="svc">
+                     <h3>Automation Assistance</h3><p>I will search for automation opportunities in your workflow and implement them.</p>
+                     <ul><li>Develop SharePoint sites with forms, lists, and analytics</li><li>Database and system design, from diagrams to working tables</li><li>Python and AI-assisted workflow automation</li></ul><small>Per project</small>
+                 </div>
+                 <div class="svc">
+                     <h3>Systems and automation</h3><p>I set up the systems and workflows that save your team repeat work.</p>
+                     <ul><li>SharePoint sites with forms, lists, and analytics</li><li>Database and system design, from diagrams to working tables</li><li>Python and AI-assisted workflow automation</li></ul><small>Per project</small>
+                 </div>
+             </div>
 </div></section>
 <section><div class="wrap">
   <h2>How an engagement works</h2>
